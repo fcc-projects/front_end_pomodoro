@@ -2,8 +2,12 @@ $( function() {
 	var timerRunning = false;
 	var sessionLength = 25;
 	var breakLength = 5;
-	var secondsLeft;
+	var secondsLeft = sessionLength * 60;
 	var sessionStarted = false;
+
+	displaySession();
+	displayBreak();
+	displayTimer(secondsLeft);
 
 	function displaySession() {
 		$(".session-display").text(sessionLength);
@@ -26,6 +30,7 @@ $( function() {
 
 		} else if (timerRunning) {
 			clearInterval(timerRunning);
+			timerRunning = false;
 		}
 	}
 
@@ -45,7 +50,7 @@ $( function() {
 		}
 	}
 
-	function displaytimer(seconds) {
+	function displayTimer(seconds) {
 		$(".timer-display").text(secToTimeFormat(seconds));
 	}
 
@@ -67,23 +72,27 @@ $( function() {
 
 
 	// BUTTON LISTENERS
+	$(".timer-container").click( function() {
+		toggleTimer();
+	})
+
 	$(".session-btn-down").click( function() {
 		sessionLength -= 1;
-		displaySession;
-	}
+		displaySession();
+	});
 
 	$(".session-btn-up").click( function() {
 		sessionLength += 1;
-		displaySession;
-	}
+		displaySession();
+	});
 
 	$(".break-btn-down").click( function() {
 		breakLength -= 1;
-		displayBreak;
-	}
+		displayBreak();
+	});
 
 	$(".break-btn-up").click( function() {
 		breakLength += 1;
-		displayBreak;
-	}
+		displayBreak();
+	});
 });

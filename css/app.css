@@ -1,0 +1,48 @@
+body {
+	font-family: sans-serif;
+}
+
+.timer-container {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 30vh;
+	width: 50vw;
+	font-size: 5rem;
+	text-align: center;
+}
+
+.timer-display {
+	cursor: pointer;
+}
+
+.settings-container {
+	margin: 0 auto;
+	width: 70vw;
+	text-align: center;
+}
+.settings {
+	display: inline-block;
+	padding: 3rem;
+	font-size: 2rem;
+}
+
+.settings > p {
+	font-size: 1.5rem;
+}
+
+button {
+	display: inline-block;
+	height: 2rem;
+	border: none;
+	background: none;
+	cursor: pointer;
+	font-size: 2rem;
+}
+
+.session-display {
+	display: inline-block;
+}
+
+.break-display {
+	display: inline-block;
+}
