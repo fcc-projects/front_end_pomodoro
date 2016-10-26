@@ -1,5 +1,6 @@
 body {
-	font-family: sans-serif;
+	font-family: 'Rubik', sans-serif;
+	background-color: #AAF683;
 }
 
 .timer-container {
@@ -9,6 +10,7 @@ body {
 	width: 50vw;
 	font-size: 5rem;
 	text-align: center;
+	color: #FF9B85;
 }
 
 .timer-display {
@@ -20,6 +22,15 @@ body {
 	width: 70vw;
 	text-align: center;
 }
+
+.session-settings {
+	color: #EE6055;
+}
+
+.break-settings {
+	color: #2AB7CA;
+}
+
 .settings {
 	display: inline-block;
 	padding: 3rem;
@@ -27,16 +38,38 @@ body {
 }
 
 .settings > p {
-	font-size: 1.5rem;
+	font-size: 0.8rem;
+	text-transform: uppercase;
 }
 
 button {
 	display: inline-block;
-	height: 2rem;
+	height: 2.5rem;
 	border: none;
 	background: none;
 	cursor: pointer;
-	font-size: 2rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	vertical-align: text-top;
+	font-weight: bold;
+	opacity: 0.5;
+}
+
+button:hover {
+	opacity: 1;
+}
+
+button:focus {
+	outline: none;
+	border: none;
+}
+
+.session-settings button {
+	color: #EE6055;
+}
+
+.break-settings button {
+	color: #2AB7CA;
 }
 
 .session-display {
